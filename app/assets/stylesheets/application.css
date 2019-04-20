@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+#img_plus {
+	width: 30px;
+	height: auto;
+}
+#form_add_todo {
+	/*visibility: hidden;*/
+	display: none;
+/*	height: 0;*/
+}
