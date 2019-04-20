@@ -1,30 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Задачи</h1>
-<!-- <br>
-<%= link_to 'Todos', todos_path %> -->
 <br>
-
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
 
 <% @projects.each do |project| %>
 <p><%= project.title %></p>
@@ -43,14 +20,7 @@
       <%= form.label :text %><br>
       <%= form.text_field :text %>
     </p>
-   
-  <!--   <p>
-      <%= form.label :project_id %>
-      <%= form.text_field :project_id %>
-    </p>
-    <p>
-      <%= form.submit %>
-    </p> -->
+  
   <p>
     <select name="todo[project_id]">
       <% @projects.each do |project| %>
@@ -61,15 +31,8 @@
     <%= link_to "ОТМЕНА", projects_path, id: "button_cancel" %>
     <%= link_to "OK", projects_path, id: "button_new_todo" %>
    
-  <!--   <p>
-      <%= form.submit %>
-    </p> -->
+
   <% end %>
 </div>
-<!-- <img src="/images/plus.png"> -->
 <%= image_tag("plus.png", :alt => "+", :id => "img_plus") %>
 
-<!-- 
-<%= link_to 'New Task', new_todo_path %> -->
-<!-- <br>
-<%= link_to 'Todos', todos_path %> -->
